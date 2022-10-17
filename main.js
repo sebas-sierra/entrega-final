@@ -114,13 +114,10 @@ D
 E
 - - - - - - - - - - - - - - - - - */
 
-function mostrarUsuarioLogueado (){
 let usuarioLogueado = JSON.parse(localStorage.getItem('usuario'));
-// //console.log(usuarioLogueado.nombre)
-
-const bienvenidamsg = document.getElementById('username')
-bienvenidamsg.innerText = usuarioLogueado.nombre;
-
+function mostrarUsuarioLogueado (){
+	const bienvenidamsg = document.getElementById('username')
+	bienvenidamsg.innerText = usuarioLogueado.nombre;
 }
 
 // Convert HTML content to PDF
