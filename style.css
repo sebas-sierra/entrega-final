@@ -11,6 +11,10 @@ body {
     background-color: rgb(255 255 255 / 54%);
   }
 
+.presentacion {    
+  background-color: #ffffffdb;
+}
+
 .titulo-custom {
     font-family: 'Bungee Shade', cursive;
   }
@@ -27,6 +31,24 @@ body {
 
 .datosParaGuardar{
   padding: 15px;
+}
+
+#formulario .form-label {
+  display: block;
+  font-family: 'Anton';
+  font-size: 25px;
+  color: #3f6bac;
+}
+
+#formulario .form-control {
+  font-family: 'Anton';
+  font-size: 35px;
+  text-align: center;
+  width: 25%;
+  margin: 15px auto ;
+  display: block;
+  border: 0px;
+  background-color: #adb5bd;
 }
 
 .card-group {
@@ -54,23 +76,6 @@ body {
   display: none;
   }
   
-#formulario .form-label {
-  display: block;
-  font-family: 'Anton';
-  font-size: 25px;
-  color: #3f6bac;
-}
-
-#formulario .form-control {
-  font-family: 'Anton';
-  font-size: 35px;
-  text-align: center;
-  width: 25%;
-  margin: 15px auto ;
-  display: block;
-  border: 0px;
-  background-color: #adb5bd;
-}
 
 .guardarResultado {
   float: right;
@@ -130,6 +135,14 @@ body {
   font-size: 73px;
 }
 
+.d-lg-block {
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.sticky-top {
+  top: -5px;
+}
 /* * * * * * * * * * * * * formulario inicion sesion * * * * * * * * * * * * */
 
 .ocultarForm {
@@ -138,4 +151,17 @@ body {
 
 .mostrarForm {
     display:block;
+}
+
+@media (max-width: 576px) {
+  #formulario .form-label {
+    font-size: 18px;
+  }
+  #formulario .form-control {
+    width: 45%;
+  }
+  #formulario .card-body {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
 }
