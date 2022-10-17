@@ -18,12 +18,6 @@
 </head>
 <body>
     <div class="container">
-    <!-- <nav id="menu-flotante" class="ocultarContent">
-        <div class="container-fluid">
-            <p><strong><span id="username"></span></strong></p><h4 class="titulo-custom navbar-brand mb-0 h1">- TIRATE UN PRODE -</h4><button type="submit" id="desloguear" class="btn btn-link">Cerrar sesion</button>
-            
-        </div>
-    </nav> -->
         
           
         <!-- Formularios -->
@@ -34,8 +28,8 @@
                 <!-- contenido centrado-->
                 <div class="col-md-5">
                     <div class="card mb-3 presentacion">
-                    <h1 class="titulo-custom text-center">TIRATE <br>- UN -<br> PRODE</h1>
-                </div>
+                        <h1 class="titulo-custom text-center">TIRATE <br>- UN -<br> PRODE</h1>
+                    </div>
                     <div class="card">
                         <div class="card-body">
                             <!-- Formulario para para el incio de sesion -->
@@ -98,6 +92,15 @@
         <div id="divProde" class="ocultarForm">
             <div class="row">
                 <div class="col-sm-6">
+                    <nav id="menu-flotante" class="ocultarContent">
+                        <div class="container-fluid">
+                            <h1 class="titulo-custom">TIRATE UN PRODE -</h1>
+                            <a class="navbar-brand" href="#"><img src="/img/user-icon.png" alt="Logo" width="25" class="d-inline-block align-text-top">
+                                <span id="username" class="username"></span>
+                            </a>
+                            <button type="submit" id="desloguear" class="btn btn-secondary btn-sm">Cerrar sesion</button>
+                        </div>
+                    </nav>
                     <div class="card mb-3">
                         <div class="card-body">
                             <h1 class="card-title titulo-custom">Fecha - 1 -</h1>
@@ -111,12 +114,6 @@
                 </div>
         
                 <div class="col-sm-6">
-                    <nav id="menu-flotante" class="ocultarContent">
-                        <div class="container-fluid">
-                            <p><strong><span id="username"></span></strong></p><h4 class="titulo-custom navbar-brand mb-0 h1">- TIRATE UN PRODE -</h4><button type="submit" id="desloguear" class="btn btn-link">Cerrar sesion</button>
-                            
-                        </div>
-                    </nav>
                     <div class="card mb-3">
                         <!-- Tabla de partidos con mis resultados -->
                         <div class="card-header misPronosticos">Mis pronosticos para esta fecha</div>
@@ -139,7 +136,7 @@
         
                                     </tbody>
                                 </table>
-                                <div id="misPuntosTotal" class="ocultarContent">puntos total:</div>
+                                <div id="misPuntosTotal" class="ocultarContent">Puntos total:</div>
                                 <button href="#" id="compararResultados" class="btn btn-outline-primary" disabled>Compara tus resultados</button>
                                 <button id="pasarPDF" class="btn btn-primary">Descarga tu prode</button>
                             </div>

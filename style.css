@@ -19,6 +19,11 @@ body {
     font-family: 'Bungee Shade', cursive;
   }
 
+.username {
+  color:#6c757d;
+ 
+  }
+
 .subtitulo-custom {
     font-family: 'Anton', sans-serif;
     font-size: 30px;
@@ -126,7 +131,7 @@ body {
 #misPuntosTotal {
   padding: 20px;
   text-align: center;
-  font-family: "bungee";
+  font-family: "Anton";
   font-size: 20px;
 }
 

@@ -153,9 +153,7 @@ class Resultado {
     }    
 }
 
-const misResultados = [
-    //{"partidoId": 1, "equipoLocal": "Atletico Tucuman", "equipoVisitante": "Colon", "golesLocal": "", "golesVisitante": ""},
-]
+const misResultados = []
 
 const lista = document.querySelector('#formulario')
 const tablaResultadosGuardados = document.querySelector('#misResultadosGuardados2')
@@ -165,7 +163,7 @@ const tablaResultadosGuardados = document.querySelector('#misResultadosGuardados
      comparacion y por lo tanto una ubicacion dentro de la tabla de posiciones. Esta tabla de posiciones se muestra a travez de la fn "mostrarPuntajes",
      dentro de la conts "tablaPuntos" en el div con id="tablapuntaje"
      */
-     const tablaPuntos = document.querySelector("#tablapuntaje tbody");
+const tablaPuntos = document.querySelector("#tablapuntaje tbody");
      
 fetch('data.json')
 .then((res) => res.json()
@@ -176,6 +174,7 @@ fetch('data.json')
             li.innerHTML = `<form class="card mb-3 forma" id="juego_${partido.partidoId}" >
                     <div class="datosParaGuardar">
                             <h6 class="card-title text-center"><span>Partido nro.: <span><label id="partido-ID${partido.partidoId}">${partido.partidoId}</label></h6>
+                            <p class="text-center"><small>Fecha: ${partido.fecha} | Estadio: ${partido.estadio} | Horario: ${partido.horario}</small></p>
                             <div class="card-group">
                                 <div class="partido-card card ">
                                     <img id="equipo-visitante${partido.partidoId}" class="card-image-top" src="${partido.escudo_equipoLocal}" alt="MDN">
@@ -265,7 +264,7 @@ function mostrarListado() {
 //Aca esta mi array de usuarios para guardar en el localStorage
 let usuarios =[ 
     {id:1, nombre:'Noe-CARP', aciertos_exactos: 4, puntos_total: 12 },
-    {id:2, nombre:'Gedecientos98', aciertos_exactos: 3, puntos_total: 9 },
+    {id:2, nombre:'HijosDelReyCrimson', aciertos_exactos: 3, puntos_total: 9 },
     {id:3, nombre:'NegroEl31', aciertos_exactos: 3, puntos_total: 9 },
     {id:4, nombre:'ParrillaCaco', aciertos_exactos: 2, puntos_total: 6 },
     {id:5, nombre:'Toni_capo_del_sur', aciertos_exactos: 0, puntos_total: 7 }
@@ -454,7 +453,7 @@ function nuevoPuntajeEnTabla() {
     });
     console.log(guardados)
     mostrarpuntajes()
-    document.getElementById('uchuario').className = "table-primary";
+    document.getElementById('uchuario').className = "table-info";
 }
 
 
