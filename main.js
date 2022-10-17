@@ -36,7 +36,7 @@ function loguearUsuario(e) {
     } else if (usuario == usuarioRecuperado.nombre && password == usuarioRecuperado.password) {
         divProde.className = "mostrarForm";
         divForms.className = "ocultarForm";
-        menuFlotante.className = "mostrarContent navbar sticky-top bg-light d-none d-lg-block"
+        menuFlotante.className = "mostrarContent navbar sticky-top bg-light d-lg-block"
         document.getElementById('loginUsuario').reset();
         mostrarUsuarioLogueado ()
     } else {
