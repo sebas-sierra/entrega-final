@@ -1,0 +1,38 @@
+
+[
+    {"partidoId": 1, 
+    "equipoLocal": "Banfield", 
+    "equipoVisitante": "Defensa y Justicia", 
+    "escudo_equipoLocal": "./img/escudos/banfield.png",
+    "escudo_equipoVisitante": "./img/escudos/defensa-justicia.png",
+    "golesLocal": "", 
+    "golesVisitante": ""
+    },
+
+    {"partidoId": 2, 
+    "equipoLocal": "Quilmes", 
+    "equipoVisitante": "Arsenal de Sarandi", 
+    "escudo_equipoLocal": "./img/escudos/quilmes.png",
+    "escudo_equipoVisitante": "./img/escudos/arsenal.png",
+    "golesLocal": "", 
+    "golesVisitante": ""
+    },
+
+    {"partidoId": 3, 
+    "equipoLocal": "Deportivo Moron", 
+    "equipoVisitante": "Patronato", 
+    "escudo_equipoLocal": "./img/escudos/dep-moron.png",
+    "escudo_equipoVisitante": "./img/escudos/patronato.png",
+    "golesLocal": "", 
+    "golesVisitante": ""
+    },
+
+    {"partidoId": 4, 
+    "equipoLocal": "Central Cordoba", 
+    "equipoVisitante": "Atlanta", 
+    "escudo_equipoLocal": "./img/escudos/centralcordoba.png",
+    "escudo_equipoVisitante": "./img/escudos/atlanta.png",
+    "golesLocal": "", 
+    "golesVisitante": ""
+    }
+]

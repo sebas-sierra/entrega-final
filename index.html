@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- html2canvas library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- html2canvas library esta version de la libreria quita las hojas en blanco
+        script src="https://unpkg.com/html2canvas@1.0.0-rc.1/dist/html2canvas.js"></script-->
+    <!-- jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.0.0/jspdf.umd.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <!-- <nav id="menu-flotante" class="ocultarContent">
+        <div class="container-fluid">
+            <p><strong><span id="username"></span></strong></p><h4 class="titulo-custom navbar-brand mb-0 h1">- TIRATE UN PRODE -</h4><button type="submit" id="desloguear" class="btn btn-link">Cerrar sesion</button>
+            
+        </div>
+    </nav> -->
+        
+          
+        <!-- Formularios -->
+        <div id="divForms" class="mostrarForm">
+            <div class="row">
+                <!-- columna para centrar contenido -->
+                <div class="col-md"></div>
+                <!-- contenido centrado-->
+                <div class="col-md-5">
+                    <h1 class="titulo-custom text-center">TIRATE <br>- UN -<br> PRODE</h1>
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Formulario para para el incio de sesion -->
+                            <div id="formLogueo" class="container">
+                                <h2 class="subtitulo-custom">Inicia sesion</h2>
+                                <form id="loginUsuario" class="mb-3 mt-3">
+                                    <div class="mb-3 mt-3">
+                                        <label for="logUsername" class="form-label">Usuario</label>
+                                        <input type="text" name="logUsername" id="logUsuario" class="form-control"
+                                            placeholder="Indica tu nombre de usuario">
+                                    </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="logPassword" class="form-label">Contraseña</label>
+                                        <input type="password" name="logPassword" id="logPassword" class="form-control"
+                                            placeholder="Ingresa tu password">
+                                    </div>
+                                    <h6 id="mensajeDelFormLogueo"></h6>
+                                    <button type="submit" id="loguear" class="btn btn-primary">Ingresar</button>
+                                </form>
+                                <h6>No tenes una cuenta? <button id="btnToRegistro" class="btn btn-link">Registrate ingresando acá</button>
+                                </h6>
+                            </div>
+                    
+                            <!-- Formulario para registro de un nuevo usuario -->
+                            <div id="formRegistro" class="ocultarForm">
+                                <div class="container">
+                                    <h2 class="subtitulo-custom">Registro de usuario</h2>
+                                    <form id="registroUsuario" class="mb-3 mt-3">
+                                        <div class="mb-3 mt-3">
+                                            <label for="username" class="form-label">Usuario</label>
+                                            <input type="text" name="username" id="usuario" class="form-control"
+                                                placeholder="Indique su nombre de usuario">
+                                        </div>
+                                        <div class="mb-3 mt-3">
+                                            <label for="email" class="form-label">E-mail</label>
+                                            <input type="email" name="email" id="email" class="form-control"
+                                                placeholder="Ingrese su correo electronico">
+                                        </div>
+                                        <div class="mb-3 mt-3">
+                                            <label for="password" class="form-label">Contraseña</label>
+                                            <input type="password" name="password" id="password" class="form-control"
+                                                placeholder="Ingrese su password">
+                                        </div>
+                                        <h6 id="msjDelFormRegistro"></h6>
+                                        <button type="submit" id="registrar" class="btn btn-primary">Registrar un nuevo usuario</button>
+                    
+                                    </form>
+                                    <h6>Ya tenes una cuenta? <button id="btnToLogin" class="btn btn-link">Iniciar sesión</button></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- columna para centrar contenido -->
+                <div class="col-md"></div>
+            </div>
+        </div>
+        
+        <!-- Prode -->
+        <div id="divProde" class="ocultarForm">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h1 class="card-title titulo-custom">Fecha - 1 -</h1>
+                            
+                            <div id="formulario">
+                                <ul class="list-group"></ul>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-sm-6">
+                    <nav id="menu-flotante" class="ocultarContent">
+                        <div class="container-fluid">
+                            <p><strong><span id="username"></span></strong></p><h4 class="titulo-custom navbar-brand mb-0 h1">- TIRATE UN PRODE -</h4><button type="submit" id="desloguear" class="btn btn-link">Cerrar sesion</button>
+                            
+                        </div>
+                    </nav>
+                    <div class="card mb-3">
+                        <!-- Tabla de partidos con mis resultados -->
+                        <div class="card-header misPronosticos">Mis pronosticos para esta fecha</div>
+                        <div class="card-body mostrarContent" id="preCarga">
+                            <p>Todavia no ingresaste resultados.</p>
+                        </div>
+                        <div class=" ocultarContent" id="postCarga">
+                            <div class="card-body">
+        
+                                <table id="misResultadosGuardados" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Partido</th>
+                                            <th>Equipo Local</th>
+                                            <th>Equipo Visitante</th>
+                                            <th>Puntos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="misResultadosGuardados2">
+        
+                                    </tbody>
+                                </table>
+                                <div id="misPuntosTotal" class="ocultarContent">puntos total:</div>
+                                <button href="#" id="compararResultados" class="btn btn-outline-primary" disabled>Compara tus resultados</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Trigger button -->
+                    <button id="pasarPDF" class="btn btn-primary">Descarga tu prode</button>
+        
+                    <div class="card mb-3">
+                        <div class="card-header">Tabla de posiciones</div>
+                        <div class="card-body">
+                            <table class="table" id="tablapuntaje">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Usuario</th>
+                                        <th class="text-center" scope="col">Aciertos exactos</th>
+                                        <th class="text-center" scope="col">Puntos total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        
+        
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="main.js" defer type="module"></script>
+</body>
+</html>
