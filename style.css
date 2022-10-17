@@ -1,0 +1,141 @@
+body {
+    background-image: url('bg-pixel.png');
+  }
+  
+/* Add padding to containers */
+.container {
+    padding: 16px;
+  }
+
+.card {
+    background-color: rgb(255 255 255 / 54%);
+  }
+
+.titulo-custom {
+    font-family: 'Bungee Shade', cursive;
+  }
+
+.subtitulo-custom {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    color: #3f6bac;
+  }
+
+.table, .table .btn {
+    font-size: 12px;
+  }
+
+.datosParaGuardar{
+  padding: 15px;
+}
+
+.card-group {
+  display: flex;
+  flex-flow: row nowrap;
+} 
+
+.imagen-visitante {
+    float: left;
+    position: relative;
+    top: -30px;
+  }
+
+.imagen-local {
+    float: right;
+    position: relative;
+    top: -30px;
+  }
+
+.mostarContent {
+  display: block;
+  }
+
+.ocultarContent {
+  display: none;
+  }
+  
+#formulario .form-label {
+  display: block;
+  font-family: 'Anton';
+  font-size: 25px;
+  color: #3f6bac;
+}
+
+#formulario .form-control {
+  font-family: 'Anton';
+  font-size: 35px;
+  text-align: center;
+  width: 25%;
+  margin: 15px auto ;
+  display: block;
+  border: 0px;
+  background-color: #adb5bd;
+}
+
+.guardarResultado {
+  float: right;
+  margin-top: 15px;
+}
+
+.partido-card {
+  border: 0px;
+}
+
+.btn-link {
+  text-decoration: none;
+}
+.escudos {
+  background-image: 'url(${partido.escudo_equipoLocal})', 'url(${partido.escudo_equipoVisitante})'; 
+  background-repeat: no-repeat; 
+  background-size: 60%, 60%; 
+  background-position: -90px top, 270px bottom;
+}
+
+.puntaje {
+  background-image: url('./img/parche-icon-up.png');
+  background-size: 62%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 17px;
+  color: white;
+}
+
+.puntaje-0 {
+  background-image: url('./img/parche-icon.png');
+  background-size: 62%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 17px;
+  color: white;
+}
+
+.puntaje_exacto {
+  background-image: url('./img/star-icon.png');
+  background-size: 62%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 17px;
+  color: white;
+}
+
+#misPuntosTotal {
+  padding: 20px;
+  text-align: center;
+  font-family: "bungee";
+  font-size: 20px;
+}
+
+#misPuntosTotal p{
+  font-family: "bungee shade";
+  font-size: 73px;
+}
+
+/* * * * * * * * * * * * * formulario inicion sesion * * * * * * * * * * * * */
+
+.ocultarForm {
+    display: none;
+}
+
+.mostrarForm {
+    display:block;
+}
