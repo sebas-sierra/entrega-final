@@ -148,6 +148,19 @@ body {
 .sticky-top {
   top: -5px;
 }
+
+.htmlToPdf{
+  float: right;
+}
+
+footer {
+  bottom: 0px;
+
+}
+
+footer p {
+  margin-bottom: 0px;
+}
 /* * * * * * * * * * * * * formulario inicion sesion * * * * * * * * * * * * */
 
 .ocultarForm {
