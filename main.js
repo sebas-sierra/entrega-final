@@ -60,8 +60,6 @@ function registrarUsuario(e) {
         password: password,
     }
 
-    // console.log("formulario"); console.log(usuario); console.log(email); console.log(password); console.log(usuarioRegistrado)
-
     const msjRegistro = document.getElementById('msjDelFormRegistro')
 
     if (usuarioRegistrado.nombre && usuarioRegistrado.email && usuarioRegistrado.password) {
@@ -79,17 +77,13 @@ function registrarUsuario(e) {
             msjRegistro.className = "ocultarForm";
         }, 5000);
     }
-
 }
-
-
 
 document.getElementById("btnToRegistro").onclick = function () { irAlRegistro() };
 function irAlRegistro() {
     document.getElementById("formRegistro").classList.toggle("mostrarForm");
     document.getElementById("formLogueo").classList.toggle("ocultarForm");
 }
-
 
 document.getElementById("btnToLogin").onclick = function () { irAlLogin() };
 function irAlLogin() {
@@ -103,7 +97,6 @@ function logOut() {
     document.getElementById('divProde').className = "ocultarForm";
     document.getElementById("divForms").className = "mostrarForm";
     menuFlotante.className = "ocultarContent";
-
 }
 
 /* - - - - - - - - - - - - - - - - -
@@ -119,28 +112,6 @@ function mostrarUsuarioLogueado (){
     bienvenidamsg.innerText = usuarioLogueado.nombre;
 
 }
-
-// Convert HTML content to PDF
-function Convert_HTML_To_PDF() {
-    var doc = new jsPDF();
-	
-    // Source HTMLElement or a string containing HTML.
-    var elementHTML = document.querySelector("#contentToPrint");
-
-    doc.html(elementHTML, {
-        callback: function(doc) {
-            // Save the PDF
-            doc.save('document-html.pdf');
-        },
-        margin: [10, 10, 10, 10],
-        autoPaging: 'text',
-        x: 0,
-        y: 0,
-        width: 190, //target width in the PDF document
-        windowWidth: 675 //window width in CSS pixels
-    });
-}
-
 
 //difinicion de la clase constructora para el objeto resultado
 class Resultado {
@@ -201,8 +172,6 @@ fetch('data.json')
 
             lista.append(li)
             li.setAttribute('class', 'list-group-item')
-            // let inputgoleslocal = document.querySelector(`#goles-local${partido.partidoId}`)
-            // console.dir(inputgoleslocal)
             let botonGuardar = document.querySelector(`#guardarBtn_${partido.partidoId}`)
             botonGuardar.addEventListener ('click', fnGuardarResultado)
             
@@ -236,7 +205,7 @@ fetch('data.json')
     })
     );
 
-//con estas constantes manejo la visivilidad de la tabla donde se guardan mis resultados
+//con estas constantes manejo la visibilidad de la tabla donde se guardan mis resultados
 const divIdPreCarga = document.querySelector("#preCarga")
 const divIdPostCarga = document.querySelector("#postCarga")
 
@@ -433,7 +402,6 @@ function mostrarTotal() {
     puntaje.innerHTML = totalPuntos;
     document.getElementById("misPuntosTotal").className ='mostarContent'
     document.getElementById("misPuntosTotal").appendChild(puntaje)
-
 }
 //Con esta funcion agrega un nuevo objeto al array 'guardados', este array contiene una lista de usuarios guardados usando localStorage. 
 //El objeto contiene las propiedades nombre + aciertos_exactos + puntos_total del usuario logueado
@@ -458,7 +426,6 @@ function nuevoPuntajeEnTabla() {
 
 
 //funcion para guardar la tabla con mi prode en un archivo pdf
-
 window.jsPDF = window.jspdf.jsPDF
 let btnToPDF = document.querySelector('#pasarPDF');
 btnToPDF.addEventListener ('click', pasarHTMLaPDF);
