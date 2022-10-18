@@ -17,6 +17,7 @@ body {
 
 .titulo-custom {
     font-family: 'Bungee Shade', cursive;
+    width: 100%;
   }
 
 .username {
