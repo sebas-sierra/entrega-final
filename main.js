@@ -38,7 +38,6 @@ function loguearUsuario(e) {
         divForms.className = "ocultarForm";
         menuFlotante.className = "mostrarContent navbar sticky-top bg-light d-lg-block"
         document.getElementById('loginUsuario').reset();
-        mostrarUsuarioLogueado ()
     } else {
         mensaje.innerText = "El password que ingresaste es incorrecto!";
         setTimeout(() => {
@@ -201,6 +200,7 @@ fetch('data.json')
                 document.getElementById(`juego_${partido.partidoId}`).reset();
                 document.getElementById(`guardarBtn_${partido.partidoId}`).disabled = true;
             }
+	mostrarUsuarioLogueado ()
         })
     })
     );
