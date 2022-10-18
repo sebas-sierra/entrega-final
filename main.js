@@ -105,11 +105,10 @@ O
 D
 E
 - - - - - - - - - - - - - - - - - */
-let usuarioLogueado = JSON.parse(localStorage.getItem('usuario'));
 function mostrarUsuarioLogueado (){
     const bienvenidamsg = document.getElementById('username')
+    let usuarioLogueado = JSON.parse(localStorage.getItem('usuario'));
     bienvenidamsg.innerText = usuarioLogueado.nombre;
-
 }
 
 //difinicion de la clase constructora para el objeto resultado
