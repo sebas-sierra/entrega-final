@@ -23,8 +23,6 @@ function loguearUsuario(e) {
     const recuperarUsuario = localStorage.getItem('usuario');
     const usuarioRecuperado = JSON.parse(recuperarUsuario);
 
-    //console.log(usuarioRecuperado.password);
-
     const mensaje = document.getElementById("mensajeDelFormLogueo")
 
     if (usuarioRecuperado == null) {
@@ -38,6 +36,7 @@ function loguearUsuario(e) {
         divForms.className = "ocultarForm";
         menuFlotante.className = "mostrarContent navbar sticky-top bg-light d-lg-block"
         document.getElementById('loginUsuario').reset();
+        mostrarUsuarioLogueado ()
         
     } else {
         mensaje.innerText = "El password que ingresaste es incorrecto!";
@@ -106,8 +105,9 @@ O
 D
 E
 - - - - - - - - - - - - - - - - - */
-let usuarioLogueado = JSON.parse(localStorage.getItem('usuario'));
+let usuarioLogueado = " ";
 function mostrarUsuarioLogueado (){
+    usuarioLogueado = JSON.parse(localStorage.getItem('usuario'));
     const bienvenidamsg = document.getElementById('username')
     bienvenidamsg.innerText = usuarioLogueado.nombre;
 
@@ -201,7 +201,7 @@ fetch('data.json')
                 document.getElementById(`juego_${partido.partidoId}`).reset();
                 document.getElementById(`guardarBtn_${partido.partidoId}`).disabled = true;
             }
-            mostrarUsuarioLogueado ()
+            
         })
     })
     );
