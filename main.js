@@ -107,7 +107,7 @@ E
 - - - - - - - - - - - - - - - - - */
 function mostrarUsuarioLogueado (){
     const bienvenidamsg = document.getElementById('username')
-    let usuarioLogueado = JSON.parse(localStorage.getItem('usuario'));
+    const usuarioLogueado = JSON.parse(localStorage.getItem('usuario'));
     bienvenidamsg.innerText = usuarioLogueado.nombre;
 }
 
