@@ -38,6 +38,7 @@ function loguearUsuario(e) {
         divForms.className = "ocultarForm";
         menuFlotante.className = "mostrarContent navbar sticky-top bg-light d-lg-block"
         document.getElementById('loginUsuario').reset();
+        
     } else {
         mensaje.innerText = "El password que ingresaste es incorrecto!";
         setTimeout(() => {
@@ -105,10 +106,11 @@ O
 D
 E
 - - - - - - - - - - - - - - - - - */
+let usuarioLogueado = JSON.parse(localStorage.getItem('usuario'));
 function mostrarUsuarioLogueado (){
     const bienvenidamsg = document.getElementById('username')
-    const usuarioLogueado = JSON.parse(localStorage.getItem('usuario'));
     bienvenidamsg.innerText = usuarioLogueado.nombre;
+
 }
 
 //difinicion de la clase constructora para el objeto resultado
@@ -199,7 +201,7 @@ fetch('data.json')
                 document.getElementById(`juego_${partido.partidoId}`).reset();
                 document.getElementById(`guardarBtn_${partido.partidoId}`).disabled = true;
             }
-	mostrarUsuarioLogueado ()
+            mostrarUsuarioLogueado ()
         })
     })
     );
